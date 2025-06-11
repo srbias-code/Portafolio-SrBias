@@ -1,12 +1,77 @@
-# React + Vite
+# Portafolio Personal - SrBias
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🚀 Tecnologías y Librerías Utilizadas
 
-Currently, two official plugins are available:
+### Core
+- **React** - Biblioteca principal para construir la interfaz de usuario
+- **Vite** - Herramienta de construcción y desarrollo que ofrece un servidor de desarrollo rápido
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Estilos y UI
+- **Tailwind CSS** - Framework de CSS para diseño rápido y responsivo
+- **Framer Motion** - Biblioteca para animaciones fluidas y transiciones
+- **React Icons** - Colección de iconos populares (FaReact, FaGithub, etc.)
 
-## Expanding the ESLint configuration
+### Navegación y Scroll
+- **React Scroll** - Manejo suave del scroll y navegación entre secciones
+- **React Beautiful DND** - Drag and Drop para la sección de tecnologías
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Context y Estado
+- **React Context API** - Manejo del estado global (tema, idioma)
+
+### Formularios y Validación
+- **React Hook Form** - Manejo de formularios
+- **EmailJS** - Servicio para enviar emails desde el formulario de contacto
+
+### Optimización
+- **React Lazy Loading** - Carga perezosa de componentes
+- **React Suspense** - Manejo de estados de carga
+
+## 📦 Instalación
+
+```bash
+# Clonar el repositorio
+git clone [url-del-repositorio]
+
+# Instalar dependencias
+npm install
+
+# Iniciar servidor de desarrollo
+npm run dev
+```
+
+## 🛠️ Scripts Disponibles
+
+- `npm run dev` - Inicia el servidor de desarrollo
+- `npm run build` - Construye la aplicación para producción
+- `npm run preview` - Previsualiza la versión de producción
+
+## 🌐 Características
+
+- Diseño responsivo
+- Soporte multiidioma (Español, Inglés, Portugués)
+- Animaciones suaves
+- Sección de tecnologías interactiva con drag and drop
+- Formulario de contacto funcional
+- Tema oscuro por defecto
+
+## 📝 Notas Adicionales
+
+- El proyecto utiliza Vite como bundler principal
+- Las animaciones están optimizadas para rendimiento
+- El diseño es completamente responsivo
+- La sección de tecnologías permite reorganizar las tecnologías mediante drag and drop
+- El formulario de contacto está conectado a EmailJS para el envío de mensajes
+
+## 🔧 Configuración de EmailJS
+
+Para que el formulario de contacto funcione, necesitas configurar las siguientes variables de entorno:
+
+```env
+VITE_EMAILJS_SERVICE_ID=tu_service_id
+VITE_EMAILJS_TEMPLATE_ID=tu_template_id
+VITE_EMAILJS_PUBLIC_KEY=tu_public_key
+```
+
+## 📄 Licencia
+
+Este proyecto está bajo la Licencia MIT.
