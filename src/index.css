@@ -1,0 +1,394 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.animate-blink {
+  animation: blink 1s step-end infinite;
+}
+
+:root {
+  --background: #000000;
+  --foreground: #ffffff;
+  --text: #ffffff;
+  --text-secondary: #a3a3a3;
+  --accent: #ef4444;
+  --border: rgba(255, 255, 255, 0.1);
+  --card-bg: rgba(31, 41, 55, 0.5);
+  --card-border: rgba(255, 255, 255, 0.1);
+  --card-hover: rgba(31, 41, 55, 0.7);
+  --nav-bg: rgba(0, 0, 0, 0.8);
+  --nav-border: rgba(255, 255, 255, 0.1);
+  --primary: #0ea5e9;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-padding-top: 4rem; /* Ajustar por la altura de la barra de navegación fija */
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--text-secondary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text);
+}
+
+/* Ensure slick-list allows transformed elements to be visible */
+.slick-list {
+  overflow: hidden !important;
+  margin: 0 !important;
+  height: auto !important;
+  padding: 30px 0 !important;
+}
+
+/* Projects Carousel - slick-slide styles */
+.slick-slide {
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out !important;
+  margin: 0 15px !important;
+  box-sizing: border-box !important;
+  opacity: 1;
+  transform: scale(1);
+  height: auto !important;
+  display: flex !important;
+  align-items: center !important;
+  width: 100% !important;
+  max-width: 380px !important;
+  padding: 10px 0 !important;
+}
+
+.slick-center {
+  opacity: 1 !important;
+  transform: scale(1) !important;
+  z-index: 1 !important;
+}
+
+/* Target the actual card element inside the slick slide */
+.slick-slide .card-primary {
+  height: 450px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  transition: all 0.3s ease-in-out !important;
+  transform-origin: center center !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+  background: rgba(31, 41, 55, 0.5) !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+/* Custom dots styling */
+.slick-dots {
+  bottom: -40px !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 8px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.slick-dots li {
+  margin: 0 !important;
+  width: auto !important;
+  height: auto !important;
+}
+
+.slick-dots li button:before {
+  color: #666 !important;
+  opacity: 0.5 !important;
+  font-size: 8px !important;
+  transition: all 0.3s ease-in-out !important;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #ef4444 !important;
+  opacity: 1 !important;
+  transform: scale(1.2) !important;
+}
+
+/* Ensure arrows are visible */
+.slick-prev,
+.slick-next {
+  z-index: 10 !important;
+  transition: all 0.3s ease-in-out !important;
+  width: 40px !important;
+  height: 40px !important;
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+  transform: scale(1.1) !important;
+}
+
+/* Ensure slides are properly spaced */
+.slick-track {
+  display: flex !important;
+  align-items: center !important;
+  margin: 0 !important;
+  transition: transform 0.3s ease-in-out !important;
+}
+
+/* Container styles */
+.slick-slider {
+  padding: 0 !important;
+  margin: 0 !important;
+  overflow: hidden !important;
+  position: relative !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1920px) {
+  .slick-slide {
+    max-width: 360px !important;
+  }
+}
+
+@media (max-width: 1440px) {
+  .slick-slide {
+    max-width: 340px !important;
+  }
+}
+
+@media (max-width: 1280px) {
+  .slick-slide {
+    max-width: 320px !important;
+  }
+}
+
+@media (max-width: 1024px) {
+  .slick-slide {
+    max-width: 300px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .slick-slide {
+    max-width: 100% !important;
+  }
+  
+  .slick-slide .card-primary {
+    height: 400px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .slick-slide .card-primary {
+    height: 380px !important;
+  }
+}
+
+/* Card styles */
+.card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  border-color: var(--accent);
+}
+
+/* Card variants */
+.card-primary {
+  background: rgba(17, 25, 40, 0.75);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.card-primary:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  border-color: rgba(239, 68, 68, 0.5);
+  background: rgba(17, 25, 40, 0.85);
+}
+
+.card-primary img {
+  transition: transform 0.3s ease;
+}
+
+.card-primary:hover img {
+  transform: scale(1.05);
+}
+
+.card-secondary {
+  background-color: rgba(31, 41, 55, 0.3);
+  border: 1px solid var(--card-border);
+}
+
+.card-secondary:hover {
+  border-color: var(--accent);
+}
+
+/* Text styles */
+.text-primary {
+  color: var(--text);
+}
+
+.text-secondary {
+  color: var(--text-secondary);
+}
+
+.text-accent {
+  color: var(--accent);
+}
+
+/* Background styles */
+.bg-primary {
+  background-color: var(--background);
+}
+
+.bg-card {
+  background-color: var(--card-bg);
+}
+
+.bg-nav {
+  background-color: var(--nav-bg);
+  border-bottom: 1px solid var(--nav-border);
+}
+
+.bg-accent {
+  background-color: var(--accent);
+}
+
+.bg-accent\/90 {
+  background-color: color-mix(in srgb, var(--accent) 90%, transparent);
+}
+
+.bg-accent\/20 {
+  background-color: color-mix(in srgb, var(--accent) 20%, transparent);
+}
+
+.bg-accent\/10 {
+  background-color: color-mix(in srgb, var(--accent) 10%, transparent);
+}
+
+/* Border styles */
+.border-primary {
+  border-color: var(--border);
+}
+
+.border-accent {
+  border-color: var(--accent);
+}
+
+/* Button styles */
+button {
+  @apply focus:outline-none;
+}
+
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Link styles */
+a {
+  @apply focus:outline-none;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Input styles */
+input, textarea {
+  @apply focus:outline-none;
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  color: var(--text);
+  transition: all 0.3s ease;
+}
+
+input:hover, textarea:hover {
+  border-color: var(--accent);
+}
+
+input:focus, textarea:focus {
+  border-color: var(--accent);
+}
+
+/* Projects Section */
+.card-primary {
+  background: rgba(17, 25, 40, 0.75);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.card-primary:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  border-color: rgba(239, 68, 68, 0.5);
+  background: rgba(17, 25, 40, 0.85);
+}
+
+.card-primary img {
+  transition: transform 0.3s ease;
+}
+
+.card-primary:hover img {
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  background: rgba(17, 25, 40, 0.75);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive Grid Adjustments */
+@media (max-width: 1024px) {
+  .card-primary {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-primary {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .card-primary {
+    max-width: 100%;
+  }
+}
+
+/* Remove old carousel styles */
+.slick-list,
+.slick-track,
+.slick-slide,
+.slick-slider,
+.slick-dots,
+.slick-prev,
+.slick-next {
+  display: none !important;
+}
