@@ -56,36 +56,36 @@ const Projects = () => {
   }
 
   const projects = [
-    {
+     {
       id: 1,
       title: {
-        en: 'Flomeco',
-        es: 'Flomeco',
-        pt: 'Flomeco'
+        en: 'Portafolio Cooperativo',
+        es: 'Portafolio Cooperativo',
+        pt: 'Portfólio Cooperativo'
       },
       description: {
-        en: 'A modern web application built with Next.js and TypeScript, featuring a responsive design and advanced UI components.',
-        es: 'Una aplicación web moderna construida con Next.js y TypeScript, con un diseño responsivo y componentes de UI avanzados.',
-        pt: 'Uma aplicação web moderna construída com Next.js e TypeScript, com design responsivo e componentes de UI avançados.'
+        en: 'A portfolio created in collaboration with my colleague Tomas Mendez Nacher.',
+        es: 'Un portafolio realizado en conjunto con mi compañero Tomas Mendez Nacher.',
+        pt: 'Um portfólio feito em conjunto com meu colega Tomas Mendez Nacher.'
       },
-      technologies: ['React', 'TypeScript', 'Next.js', 'Tailwind CSS'],
-      github: 'https://github.com/srbias-code/flomeco',
-      demo: 'https://flomeco.vercel.app/',
-      image: '/images/flomeco.png'
+      technologies: ['HTML', 'CSS', 'React', 'JavaScript', 'Tailwind CSS'],
+      github: 'https://github.com/Tot-s/Portfolio-T-T', 
+      demo: '',
+      image: '/images/cooperativo.png'
     },
     {
       id: 2,
       title: {
-        en: 'Personal Portfolio (This Site)',
-        es: 'Portafolio Personal (Este Sitio)',
-        pt: 'Portfólio Pessoal (Este Site)'
+        en: 'Personal Portfolio ',
+        es: 'Portafolio Personal ',
+        pt: 'Portfólio Pessoal'
       },
       description: {
         en: 'My personal portfolio website, showcasing my skills and projects.',
         es: 'Mi sitio web de portafolio personal, mostrando mis habilidades y proyectos.',
         pt: 'Meu site de portfólio pessoal, apresentando minhas habilidades e projetos.'
       },
-      technologies: ['React', 'Tailwind CSS', 'Framer Motion'],
+      technologies: ['HTML', 'CSS'], // <-- Solo HTML y CSS
       github: 'https://github.com/srbias-code/portafolio-srbias',
       demo: 'https://srbias-proyecto-maquetacion-dh.netlify.app/',
       image: '/images/srbiasweb.png'
@@ -102,7 +102,7 @@ const Projects = () => {
         es: 'Una recreación fiel de la página de búsqueda clásica de Google usando HTML y CSS.',
         pt: 'Uma recriação fiel da página de pesquisa clássica do Google usando HTML e CSS.'
       },
-      technologies: ['HTML', 'CSS'],
+      technologies: ['HTML', 'CSS', 'JavaScript', 'API'],
       github: 'https://github.com/srbias-code/Google-Homepage-Clone',
       demo: 'https://srbias-google-homepage-clone.netlify.app/',
       image: '/images/google.png'
@@ -261,4 +261,4 @@ const Projects = () => {
   )
 }
 
-export default Projects 
+export default Projects

@@ -8,7 +8,7 @@ import { useTheme } from '../context/ThemeContext'
 const Technologies = () => {
   const { language } = useTheme()
 
-  const learningTechs = ['React', 'UX/UI', 'Java', 'Go', 'NoSQL', 'AWS', 'Cloud', 'Power BI']
+  const learningTechs = [, 'Java', 'Go', 'NoSQL', 'AWS', 'Cloud', 'Power BI']
 
   const translations = {
     title: {

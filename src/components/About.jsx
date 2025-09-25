@@ -81,7 +81,7 @@ const About = () => {
             viewport={{ once: true }}
             className="relative"
           >
-            <div className="card-primary p-8 rounded-2xl border border-gray-800 hover:border-red-500/50 transition-all duration-300">
+            <div className="card-secondary p-8 rounded-xl border border-gray-800 hover:border-red-500/50 transition-all duration-300">
               <p className="text-lg text-gray-300 leading-relaxed">
                 {translations.description[language]}
               </p>
@@ -157,4 +157,4 @@ const About = () => {
   )
 }
 
-export default About 
+export default About

@@ -41,7 +41,7 @@ const Footer = () => {
         <div className="flex flex-col items-center justify-center space-y-4">
           {/* Logo and Name */}
           <div className="flex items-center space-x-2">
-            <span className="text-2xl font-bold text-white">SrBias</span>
+            <span className="text-2xl font-bold text-white">Tobias Pedrouzo</span>
             <span className="text-red-500">.</span>
           </div>
 
@@ -64,7 +64,7 @@ const Footer = () => {
           {/* Copyright */}
           <div className="text-center text-gray-400 text-sm">
             <p>
-              {translations.made[language]} <span className="text-white">SrBias</span>
+              {translations.made[language]} <span className="text-white">Tobias Pedrouzo</span>
             </p>
             <p>© {new Date().getFullYear()} - {translations.rights[language]}</p>
           </div>
